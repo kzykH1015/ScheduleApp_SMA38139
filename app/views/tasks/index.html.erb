@@ -2,6 +2,10 @@
 
 <%= link_to "新規作成", new_task_path %>
 
-<% @tasks.each do |t| %>
-  <%= t.task_title %>
-<% end %>
+<div class="task-list">
+  <% @tasks.each do |t| %>
+    <div class="task-content">
+      <%= t.task_title %>
+    </div>
+  <% end %>
+</div>
