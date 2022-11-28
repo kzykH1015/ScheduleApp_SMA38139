@@ -8,8 +8,13 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.create(task_params)
-    redirect_to root_path
+    @task = Task.new(task_params)
+    if @task.valid?
+      @task.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   private
