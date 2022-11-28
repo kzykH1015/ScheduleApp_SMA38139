@@ -1,8 +1,17 @@
-<h1>タスク新規作成</h1>
-<%= form_with model: @task, local: true do |f| %>
-  <%= f.text_field :task_title, placeholder: "title" %>
-  <%= f.text_area :task_memo, placeholder: "memo" %>
-  <%= f.date_field :task_time %>
-  <%= f.submit "SEND" %>
-<% end %>
-
+<h1 class="new-task-title">タスク新規作成</h1>
+<div class="new-task-form">
+  <%= form_with model: @task, local: true do |f| %>
+    <div class="input-form">
+      <%= f.text_field :task_title, placeholder: "title", class:"form-item" %>
+    </div>
+    <div class="input-form">
+      <%= f.text_area :task_memo, placeholder: "memo", class:"form-item memo" %>
+    </div>
+    <div class="input-form">
+      <%= f.date_field :task_time, class:"form-item" %>
+    </div>
+    <div class="input-form">
+      <%= f.submit "SEND", class:"submit-btn" %>
+    </div>
+  <% end %>
+</div>
