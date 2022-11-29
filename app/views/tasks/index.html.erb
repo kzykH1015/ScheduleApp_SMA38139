@@ -5,7 +5,7 @@
 <div class="task-list">
   <% @tasks.each do |t| %>
     <div class="task-content">
-      <%= t.task_title %>
+      <%= link_to t.task_title, task_path(t.id) %>
     </div>
   <% end %>
 </div>
