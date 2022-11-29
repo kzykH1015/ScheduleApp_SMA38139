@@ -1,10 +1,16 @@
-<h1>タスク詳細画面</h1>
-<div class="show-task-item">
-  <%= @task.task_title %>
-</div>
-<div class="show-task-item">
-  <%= @task.task_memo %>
-</div>
-<div class="show-task-item">
-  <%= @task.task_time %>
+<div class="task-data">
+  <h2>タスク詳細画面</h2>
+  <div class="show-task-item">
+    タイトル：<%= @task.task_title %>
+  </div>
+  <div class="show-task-item">
+    メモ：<%= @task.task_memo %>
+  </div>
+  <div class="show-task-item">
+    期限：<%= @task.task_time %>
+  </div>
+
+  <div class="return-top-btn">
+    <%= link_to "トップページへ", root_path,  class:"rt-btn" %>
+  </div>
 </div>
