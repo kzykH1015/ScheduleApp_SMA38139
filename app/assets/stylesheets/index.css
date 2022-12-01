@@ -7,3 +7,6 @@
   font-weight: 700;
   margin: 0 10px;
 }
+.task-link {
+  text-decoration: none;
+}
