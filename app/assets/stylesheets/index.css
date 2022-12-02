@@ -10,3 +10,11 @@
 .task-link {
   text-decoration: none;
 }
+.new-task-link {
+  text-decoration: none;
+  background-color: blue;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  font-size: 20px;
+}
