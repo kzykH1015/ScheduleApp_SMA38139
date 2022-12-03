@@ -1,0 +1,17 @@
+<h1 class="new-task-title">タスク編集</h1>
+<div class="new-task-form">
+  <%= form_with model: @task, url: task_path(@task.id), local: true, method: :patch do |f| %>
+    <div class="input-form">
+      <%= f.text_field :task_title, placeholder: "title", class:"form-item" %>
+    </div>
+    <div class="input-form">
+      <%= f.text_area :task_memo, placeholder: "memo", class:"form-item memo" %>
+    </div>
+    <div class="input-form">
+      <%= f.date_field :task_time, class:"form-item" %>
+    </div>
+    <div class="input-form">
+      <%= f.submit "SEND", class:"submit-btn" %>
+    </div>
+  <% end %>
+</div>
