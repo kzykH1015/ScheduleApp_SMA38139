@@ -2,11 +2,20 @@
 
 <%= link_to "新規作成", new_task_path, class:"new-task-link" %>
 
+<h3>進行中のタスク</h3>
 <div class="task-list">
   <% @tasks.each do |t| %>
     <div class="task-content">
       <%= link_to t.task_title, task_path(t.id), class:"task-link" %>
       <p class="task-time"><%= t.task_time %></p>
+    </div>
+    <div class="btns">
+      <div class="select-btn ed">
+      <%= link_to "編集", edit_task_path(t.id),  class:"btn-font" %>
+      </div>
+      <div class="select-btn del">
+        <%= link_to "削除", task_path(t.id), method: :delete, class:"btn-font" %>
+      </div>
     </div>
   <% end %>
 </div>
