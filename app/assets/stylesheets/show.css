@@ -36,3 +36,7 @@ h2 {
 .ed {
   background-color: blueviolet;
 }
+.del {
+  background-color: gray;
+  color: antiquewhite;
+}
