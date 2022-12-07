@@ -7,6 +7,7 @@
   <% @tasks.each do |t| %>
     <div class="task-content">
       <%= link_to t.task_title, task_path(t.id), class:"task-link" %>
+      <p class="task-memo"><%= t.task_memo %></p>
       <p class="task-time"><%= t.task_time %></p>
     </div>
     <div class="btns">
