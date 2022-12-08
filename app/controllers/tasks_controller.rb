@@ -1,8 +1,10 @@
 class TasksController < ApplicationController
   before_action :find_task, only: [:show, :edit, :update, :destroy]
+  before_action :move_sign_in
 
   def index
     @tasks = Task.all
+    @user = User.find(current_user.id)
   end
 
   def new
@@ -42,6 +44,10 @@ class TasksController < ApplicationController
 
   def find_task
     @task = Task.find(params[:id])
+  end
+
+  def move_sign_in
+    redirect_to  new_user_registration_path unless user_signed_in?
   end
 
 end
