@@ -4,6 +4,7 @@ class TasksController < ApplicationController
 
   def index
     @tasks = Task.all
+    @user = User.find(current_user.id)
   end
 
   def new
