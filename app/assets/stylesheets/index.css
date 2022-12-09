@@ -52,3 +52,8 @@
   padding: 5px;
   display: flex;
 }
+
+.logout-btn {
+  text-decoration: none;
+  font-weight: 600;
+}
